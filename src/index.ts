@@ -1,5 +1,7 @@
 /** Components **/
 export { default as Box } from '@/components/atom/box';
+export { default as Button } from '@/components/atom/button';
+export { default as Flex } from '@/components/atom/flex';
 
 /** HOOKS **/
 export { default as useDebouncedValue } from './hooks/useDebouncedValue';
