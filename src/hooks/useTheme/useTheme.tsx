@@ -26,7 +26,7 @@ const supportsDarkMode = () =>
   window.matchMedia('(prefers-color-scheme: dark)').matches === true;
 
 const useDarkMode = (): [Theme, (theme?: Theme) => void] => {
-  const [themeState, setThemeState] = React.useState(Theme.LIGHT);
+  const [themeState, setThemeState] = React.useState(Theme.DARK);
 
   const setThemeStateEnhanced = (themeValue?: Theme) => {
     setThemeState((prevState) => {
@@ -36,8 +36,8 @@ const useDarkMode = (): [Theme, (theme?: Theme) => void] => {
         ? Theme.DARK
         : Theme.LIGHT;
 
-      document.body.classList.remove('maximeheckel-' + prevState);
-      document.body.classList.add('maximeheckel-' + nextState);
+      document.body.classList.remove('c1495616js-' + prevState);
+      document.body.classList.add('c1495616js-' + nextState);
       document.documentElement.style.setProperty('color-scheme', nextState);
       storage.set(nextState);
 
@@ -61,6 +61,9 @@ const useDarkMode = (): [Theme, (theme?: Theme) => void] => {
   return [themeState, setThemeStateEnhanced];
 };
 
+/**
+ * Regular ThemeProvider
+ */
 const ThemeProvider = (props: { children: React.ReactNode }) => {
   const { children } = props;
   const [themeState, setThemeStateEnhanced] = useDarkMode();
@@ -90,5 +93,40 @@ const ThemeProvider = (props: { children: React.ReactNode }) => {
   );
 };
 
-export { ThemeProvider };
+/**
+ * Storybook ThemeProvider
+ */
+const SbThemeProvider = (props: { children: React.ReactNode }) => {
+  const { children } = props;
+  const [themeClass, setThemeClass] = React.useState<
+    'c1495616js-dark' | 'c1495616js-light'
+  >('c1495616js-dark');
+  const toggleDark = () =>
+    setThemeClass((theme) =>
+      theme === 'c1495616js-dark' ? 'c1495616js-light' : 'c1495616js-dark'
+    );
+  const isDark = themeClass === 'c1495616js-dark';
+  return (
+    <ThemeContext.Provider value={{ dark: isDark, toggleDark }}>
+      <div
+        className={themeClass}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem',
+          backgroundColor: isDark ? 'black' : 'white',
+          height: '100vh',
+          padding: '0.5rem',
+        }}
+      >
+        <button type="button" onClick={toggleDark}>
+          Theme: {isDark ? 'dark' : 'light'}
+        </button>
+        {children}
+      </div>
+    </ThemeContext.Provider>
+  );
+};
+
+export { ThemeProvider, SbThemeProvider };
 export default useTheme;

@@ -8,6 +8,7 @@ export {
   default as useTheme,
   ThemeContext,
   ThemeProvider,
+  SbThemeProvider,
 } from './hooks/useTheme';
 
 /** LIB **/

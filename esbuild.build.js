@@ -1,5 +1,5 @@
 const esbuild = require('esbuild');
-const sharedConfig = require('esbuild.common');
+const sharedConfig = require('./esbuild.common');
 const { globPlugin } = require('esbuild-plugin-glob');
 
 const buildConfig = {

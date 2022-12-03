@@ -30,7 +30,7 @@ export const StyledButton = styled('button', {
   boxShadow: 'var(--shadow, none)',
   opacity: 'var(--opacity, 1)',
   '--shadow-hover-primary':
-    '0 2px 40px -4px var(--maximeheckel-form-input-focus)',
+    '0 2px 40px -4px var(--c1495616js-form-input-focus)',
 
   '&:active': {
     '--button-scale': '0.95',
@@ -42,11 +42,11 @@ export const StyledButton = styled('button', {
   variants: {
     variant: {
       primary: {
-        '--background': 'var(--maximeheckel-colors-brand)',
+        '--background': 'var(--c1495616js-colors-brand)',
         '--color': 'hsl(var(--palette-gray-00))',
         '&:disabled': {
-          '--background': 'var(--maximeheckel-form-input-disabled)',
-          '--color': 'var(--maximeheckel-colors-typeface-tertiary)',
+          '--background': 'var(--c1495616js-form-input-disabled)',
+          '--color': 'var(--c1495616js-colors-typeface-tertiary)',
         },
 
         '&:hover': {
@@ -60,11 +60,11 @@ export const StyledButton = styled('button', {
         },
       },
       secondary: {
-        '--background': 'var(--maximeheckel-colors-emphasis)',
-        '--color': 'var(--maximeheckel-colors-brand)',
+        '--background': 'var(--c1495616js-colors-emphasis)',
+        '--color': 'var(--c1495616js-colors-brand)',
         '&:disabled': {
-          '--background': 'var(--maximeheckel-form-input-disabled)',
-          '--color': 'var(--maximeheckel-colors-typeface-tertiary)',
+          '--background': 'var(--c1495616js-form-input-disabled)',
+          '--color': 'var(--c1495616js-colors-typeface-tertiary)',
         },
 
         '&:hover': {
@@ -101,10 +101,10 @@ export const StyledIconButton = styled('button', {
   background: 'transparent',
   transition: 'color 0.3s ease, transform 0.3s ease',
   borderRadius: 'var(--border-radius-1)',
-  color: 'var(--color, var(--maximeheckel-colors-typeface-tertiary))',
+  color: 'var(--color, var(--c1495616js-colors-typeface-tertiary))',
   transform: 'scale(var(--button-content-scale, 1)) translateZ(0)',
   '--shadow-hover-primary':
-    '0 2px 40px -4px var(--maximeheckel-form-input-focus)',
+    '0 2px 40px -4px var(--c1495616js-form-input-focus)',
 
   '&::after': {
     zIndex: '0',
@@ -116,7 +116,7 @@ export const StyledIconButton = styled('button', {
     borderRadius: 'var(--corner, var(--border-radius-1))',
     transition:
       'box-shadow 0.3s ease, border-color 0.2s, background 0.3s ease,\n      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-    background: 'var(--background, var(--maximeheckel-colors-foreground))',
+    background: 'var(--background, var(--c1495616js-colors-foreground))',
     transform: 'scale(var(--button-background-scale, 1)) translateZ(0)',
     border:
       'var(--border-thickness, 1px) solid var(--border-color, transparent)',
@@ -125,15 +125,15 @@ export const StyledIconButton = styled('button', {
 
   '&:disabled': {
     cursor: 'not-allowed',
-    '--background': 'var(--maximeheckel-form-input-disabled)',
-    '--color': 'var(--maximeheckel-colors-typeface-tertiary)',
+    '--background': 'var(--c1495616js-form-input-disabled)',
+    '--color': 'var(--c1495616js-colors-typeface-tertiary)',
   },
 
   '&:hover': {
     '&:not(:disabled)': {
-      '--border-color': 'var(--maximeheckel-colors-brand)',
+      '--border-color': 'var(--c1495616js-colors-brand)',
       '--border-thickness': '2px',
-      '--color': 'var(--maximeheckel-colors-brand)',
+      '--color': 'var(--c1495616js-colors-brand)',
       '--corner': 'calc(var(--border-radius-1) + 2px)',
       '--button-background-scale': '0.92',
       '--shadow': 'var(--shadow-hover-primary)',
@@ -141,9 +141,9 @@ export const StyledIconButton = styled('button', {
   },
 
   '&:focus-visible': {
-    '--border-color': 'var(--maximeheckel-colors-brand)',
+    '--border-color': 'var(--c1495616js-colors-brand)',
     '--border-thickness': '2px',
-    '--color': 'var(--maximeheckel-colors-brand)',
+    '--color': 'var(--c1495616js-colors-brand)',
     '--corner': 'calc(var(--border-radius-1) + 2px)',
     '--button-background-scale': 0.92,
     '--shadow': 'var(--shadow-hover-primary)',

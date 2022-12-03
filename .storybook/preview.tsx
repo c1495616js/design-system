@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { globalStyles, ThemeProvider } from '../src';
+import { globalStyles, SbThemeProvider } from '../src';
 
 export const decorators = [
   (Story) => {
     globalStyles();
     return (
-      <ThemeProvider>
+      <SbThemeProvider>
         <Story />
-      </ThemeProvider>
+      </SbThemeProvider>
     );
   },
 ];
@@ -20,5 +20,9 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  darkMode: {
+    // Set the initial theme
+    current: 'c1495616js-dark',
   },
 };

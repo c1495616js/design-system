@@ -16,7 +16,9 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 //👇 We create a “template” of how args map to rendering
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args) => (
+  <Button {...args}>Button</Button>
+);
 
 //👇 Each story then reuses that template
 export const Primary = Template.bind({});
