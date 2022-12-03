@@ -22,7 +22,7 @@
     "prebuild": "pnpm clean",
     "prepack": "pnpm build",
     "test": "jest",
-    "ts-types": "tsc --emitDeclarationOnly --outDir dist",
+    "ts-types": "tsc --emitDeclarationOnly && tscpaths --project tsconfig.json -s ./src -o dist/types",
     "type-check": "tsc --noEmit",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -70,6 +70,7 @@
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.1",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "tscpaths": "^0.0.9",
     "typescript": "^4.9.3",
     "webpack": "^5.75.0"
   }

@@ -32,6 +32,7 @@ specifiers:
   rimraf: ^3.0.2
   ts-node: ^10.9.1
   tsconfig-paths-webpack-plugin: ^4.0.0
+  tscpaths: ^0.0.9
   typescript: ^4.9.3
   webpack: ^5.75.0
 
@@ -69,6 +70,7 @@ devDependencies:
   rimraf: 3.0.2
   ts-node: 10.9.1_eoe7put6ewfbqpy6gs36tihw6y
   tsconfig-paths-webpack-plugin: 4.0.0
+  tscpaths: 0.0.9
   typescript: 4.9.3
   webpack: 5.75.0_esbuild@0.15.16
 
@@ -11427,6 +11429,16 @@ packages:
       json5: 2.2.1
       minimist: 1.2.7
       strip-bom: 3.0.0
+    dev: true
+
+  /tscpaths/0.0.9:
+    resolution: {integrity: sha512-tz4qimSJTCjYtHVsoY7pvxLcxhmhgmwzm7fyMEiL3/kPFFVyUuZOwuwcWwjkAsIrSUKJK22A7fNuJUwxzQ+H+w==}
+    hasBin: true
+    dependencies:
+      commander: 2.20.3
+      globby: 9.2.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /tslib/1.14.1:
