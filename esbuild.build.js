@@ -1,6 +1,22 @@
 const esbuild = require('esbuild');
-const sharedConfig = require('./esbuild.common');
 const { globPlugin } = require('esbuild-plugin-glob');
+
+const packagejson = require('./package.json');
+
+const sharedConfig = {
+  loader: {
+    '.tsx': 'tsx',
+    '.ts': 'tsx',
+  },
+  outbase: './src',
+  bundle: true,
+  minify: true,
+  jsxFactory: 'createElement',
+  jsxFragment: 'Fragment',
+  target: ['esnext'],
+  logLevel: 'debug',
+  external: [...Object.keys(packagejson.peerDependencies || {})],
+};
 
 const buildConfig = {
   ...sharedConfig,

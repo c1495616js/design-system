@@ -2,14 +2,17 @@
   "name": "@c1495616js/dsm",
   "version": "1.0.5",
   "description": "",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "sideEffects": false,
   "repository": "https://github.com/c1495616js/dsm",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "imports": {
+    "@/*": "./dist/esm/*"
   },
   "scripts": {
     "build": "node ./esbuild.build.js",
@@ -22,7 +25,7 @@
     "prebuild": "pnpm clean",
     "prepack": "pnpm build",
     "test": "jest",
-    "ts-types": "tsc --emitDeclarationOnly && tscpaths --project tsconfig.json -s ./src -o dist/types",
+    "ts-types": "tsc --emitDeclarationOnly && resolve-tspaths",
     "type-check": "tsc --noEmit",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -67,6 +70,7 @@
     "prettier": "^2.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "resolve-tspaths": "^0.8.3",
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.1",
     "tsconfig-paths-webpack-plugin": "^4.0.0",

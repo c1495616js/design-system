@@ -29,6 +29,7 @@ specifiers:
   prettier: ^2.8.0
   react: ^18.2.0
   react-dom: ^18.2.0
+  resolve-tspaths: ^0.8.3
   rimraf: ^3.0.2
   ts-node: ^10.9.1
   tsconfig-paths-webpack-plugin: ^4.0.0
@@ -67,6 +68,7 @@ devDependencies:
   prettier: 2.8.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  resolve-tspaths: 0.8.3_typescript@4.9.3
   rimraf: 3.0.2
   ts-node: 10.9.1_eoe7put6ewfbqpy6gs36tihw6y
   tsconfig-paths-webpack-plugin: 4.0.0
@@ -4399,6 +4401,11 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /ansi-colors/4.1.3:
+    resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
+    engines: {node: '>=6'}
+    dev: true
+
   /ansi-html-community/0.0.8:
     resolution: {integrity: sha512-1APHAyr3+PCamwNw3bXCPp4HFLONZt/yIH0sZp0/469KWNTEy+qN5jQ3GVX6DMZ1UXAi34yVwtTeaG/HpBuuzw==}
     engines: {'0': node >= 0.8.0}
@@ -5443,6 +5450,11 @@ packages:
   /commander/8.3.0:
     resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
     engines: {node: '>= 12'}
+    dev: true
+
+  /commander/9.4.1:
+    resolution: {integrity: sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==}
+    engines: {node: ^12.20.0 || >=14}
     dev: true
 
   /common-path-prefix/3.0.0:
@@ -10424,6 +10436,18 @@ packages:
   /resolve-from/5.0.0:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
     engines: {node: '>=8'}
+    dev: true
+
+  /resolve-tspaths/0.8.3_typescript@4.9.3:
+    resolution: {integrity: sha512-91Qc0+Ta7teMjjqW0DOmeCkcx54QAkS1TcEwwMnnjg2g7BCRxM+2lutWnEPBtzVMcHtc+hRNy2O+zmOfREV0dg==}
+    hasBin: true
+    peerDependencies:
+      typescript: '>=3.0.3'
+    dependencies:
+      ansi-colors: 4.1.3
+      commander: 9.4.1
+      fast-glob: 3.2.12
+      typescript: 4.9.3
     dev: true
 
   /resolve-url/0.2.1:
