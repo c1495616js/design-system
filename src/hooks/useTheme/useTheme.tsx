@@ -84,7 +84,7 @@ const ThemeProvider = (props: { children: React.ReactNode }) => {
   return (
     <ThemeContext.Provider
       value={{
-        dark: themeState === Theme.DARK,
+        dark: themeState === Theme.LIGHT,
         toggleDark,
       }}
     >
