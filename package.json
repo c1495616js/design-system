@@ -1,6 +1,6 @@
 {
   "name": "@c1495616js/dsm",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
