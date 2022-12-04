@@ -26,7 +26,7 @@ const supportsDarkMode = () =>
   window.matchMedia('(prefers-color-scheme: dark)').matches === true;
 
 const useDarkMode = (): [Theme, (theme?: Theme) => void] => {
-  const [themeState, setThemeState] = React.useState(Theme.DARK);
+  const [themeState, setThemeState] = React.useState(Theme.LIGHT);
 
   const setThemeStateEnhanced = (themeValue?: Theme) => {
     setThemeState((prevState) => {
